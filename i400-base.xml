@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+  <!-- 
+    Japanese submarine Carrier type I-400
+
+    Author: Emmanuel BARANGER 2014
+    Date of creation: Febrary, 25, 2014
+    Status: pre-alpha
+    License: GNU GPL
+
+  -->
+<PropertyList>
+
+  <sim include="Systems/views.xml">
+
+    <description>I-400 (YASim)</description>
+    <author>Emmmanuel BARANGER (3D), Detlef FABER (SDM)</author>
+
+    <model>
+      <path>Aircraft/I-400/Models/i400.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <crew>
+        <pilot>
+          <visible type="int">1</visible>
+        </pilot>
+      </crew>
+    </model> 
+
+    <sound>
+      <path>Aircraft/Generic/generic-sound.xml</path>
+    </sound>
+
+    <startup>
+      <splash-texture>Aircraft/I-400/i400-splash.png</splash-texture>
+    </startup>
+
+    <walker>
+      <outside type="bool">false</outside>
+      <walking type="bool">false</walking>
+    </walker>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int">0</int>  <!-- 0 immat -->
+        <int type="int">0</int>  <!-- 1 immat -->
+        <int type="int">0</int>  <!-- 2 immat -->
+        <int type="int">0</int>  <!-- 3 immat -->
+        <int type="int">0</int>  <!-- 4 immat -->
+        <int type="int">0</int>  <!-- 5 immat -->
+        <int type="bool">0</int> <!-- 6 smoke -->
+        <int type="int">0</int>  <!-- 7 color -->
+        <float n="0" alias="/instrumentation/doors/bay/position-norm"/>
+      </generic>
+    </multiplay>
+
+    <menubar include="Dialogs/i400-menu.xml"/>
+    
+    <help include="Systems/help.xml"/>
+
+    <ai>
+      <enabled type="bool">true</enabled>
+      <scenarios-enabled type="bool" userarchive="y">true</scenarios-enabled>
+      <scenario>../Aircraft/I-400/Dialogs/AI_Part</scenario>
+    </ai>
+    
+    <systems>
+      <autopilot>
+        <path>Aircraft/I-400/Systems/SDM-filters.xml</path>
+      </autopilot>
+    </systems>
+    
+  </sim>
+
+  <position>
+    <depth-m>0</depth-m>
+  </position>
+  
+  <controls>
+    <flight>
+      <aileron-filtered type= "double">0</aileron-filtered>
+      <aileron0 type= "double">0</aileron0>
+      <throttle-filtered type= "double">0</throttle-filtered>
+    </flight>
+  </controls>
+  
+  <input>
+    <keyboard include="Systems/i400-keyboard.xml"/>
+  </input>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/I-400/Nasal/doors.nas</file>
+    </doors>
+    <val>
+      <file>Aircraft/I-400/Nasal/liveries.nas</file>
+    </val>
+    <ship>
+      <file>Aircraft/I-400/Nasal/ship.nas</file>
+    </ship>
+    <walk>
+      <file>Aircraft/I-400/Nasal/walk.nas</file>
+      <script>main_loop();</script>
+    </walk>
+  </nasal>
+
+</PropertyList>

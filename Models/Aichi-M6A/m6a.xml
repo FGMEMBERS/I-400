@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>m6a.ac</path>
+
+  <animation>
+    <!-- draw these first (in no particular order) -->
+    <object-name>m6a-fuselage</object-name>
+    <object-name>m6a-verriereA</object-name>
+    <object-name>m6a-verriereB</object-name>
+    <object-name>m6a-ailes</object-name>
+    <object-name>m6a-aileronG</object-name>
+    <object-name>m6a-voletG1</object-name>
+    <object-name>m6a-voletG2</object-name>
+    <object-name>m6a-aileronD</object-name>
+    <object-name>m6a-voletD1</object-name>
+    <object-name>m6a-voletD2</object-name>
+    <object-name>m6a-ailes2</object-name>
+    <object-name>m6a-direction</object-name>
+    <object-name>m6a-profondeur</object-name>
+    <object-name>m6a-bol</object-name>
+    <object-name>m6a-antenne</object-name>
+    <object-name>m6a-supports</object-name>
+    <object-name>m6a-gouvernailG</object-name>
+    <object-name>m6a-gouvernailD</object-name>
+    <object-name>m6a-flotteursH</object-name>
+    
+    <object-name>m6a-interieur</object-name>
+    <object-name>m6a-inttour</object-name>
+    <object-name>m6a-planchet</object-name>
+    <object-name>m6a-intverriereA</object-name>
+    <object-name>m6a-intverriereB</object-name>
+
+    <object-name>m6a-trous</object-name>
+    <object-name>m6a-helice</object-name>
+    <object-name>m6a-echappes</object-name>
+    <object-name>m6a-cables</object-name>
+    <object-name>m6a-flotteursB</object-name>
+
+    <!-- draw this at last (order critical!) -->
+    <object-name>m6a-vitres</object-name>
+    <object-name>m6a-vitresverriereA</object-name>
+    <object-name>m6a-vitresverriereB</object-name>
+    
+    <object-name>m6a-intvitres</object-name>
+    <object-name>m6a-intvitresverriereA</object-name>
+    <object-name>m6a-intvitresverriereB</object-name>  
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>m6a-fuselage</object-name>
+    <object-name>m6a-verriereA</object-name>
+    <object-name>m6a-verriereB</object-name>
+    <object-name>m6a-ailes</object-name>
+    <object-name>m6a-aileronG</object-name>
+    <object-name>m6a-voletG1</object-name>
+    <object-name>m6a-voletG2</object-name>
+    <object-name>m6a-aileronD</object-name>
+    <object-name>m6a-voletD1</object-name>
+    <object-name>m6a-voletD2</object-name>
+    <object-name>m6a-ailes2</object-name>
+    <object-name>m6a-direction</object-name>
+    <object-name>m6a-profondeur</object-name>
+    <object-name>m6a-bol</object-name>
+    <object-name>m6a-antenne</object-name>
+    <object-name>m6a-supports</object-name>
+    <object-name>m6a-gouvernailG</object-name>
+    <object-name>m6a-gouvernailD</object-name>
+    <object-name>m6a-flotteursH</object-name>
+  </effect>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/I-400/Models/Aichi-M6A/glass</inherits-from>
+    <object-name>m6a-vitres</object-name>
+    <object-name>m6a-vitresverriereA</object-name>
+    <object-name>m6a-vitresverriereB</object-name>
+    
+    <object-name>m6a-intvitres</object-name>
+    <object-name>m6a-intvitresverriereA</object-name>
+    <object-name>m6a-intvitresverriereB</object-name>  
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>m6a-vitres</object-name>
+    <object-name>m6a-vitresverriereA</object-name>
+    <object-name>m6a-vitresverriereB</object-name>
+    
+    <object-name>m6a-intvitres</object-name>
+    <object-name>m6a-intvitresverriereA</object-name>
+    <object-name>m6a-intvitresverriereB</object-name>  
+  </effect>
+
+</PropertyList>

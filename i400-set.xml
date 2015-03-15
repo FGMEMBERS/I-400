@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="i400-base.xml">
+
+  <sim>
+    
+    <description>I-400 (YASim)</description>
+    <author>Emmmanuel BARANGER (3D), Detlef FABER (SDM)</author>
+    <status>development</status>
+    <flight-model>null</flight-model>
+    
+    <SDM include="i400-SDM.xml"/>
+    
+    <rating>
+      <FDM type="int">     3 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   3 </model>
+    </rating>
+
+  </sim>
+
+</PropertyList>

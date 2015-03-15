@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <key n="100">
+    <name>d</name>
+    <desc>Bay door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.bay.toggle();</script>
+    </binding>
+  </key>
+
+  <key n="110">
+    <name>n</name>
+    <desc>open Flood Valve</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/sim/SDM/controls/valve-norm</property>
+      <step type="double">0.2</step>
+      <min type="double">0</min>
+      <max type="double">1</max>
+    </binding>
+  </key>
+ 
+  <key n="78">
+    <name>N</name>
+    <desc>close Flood Valve</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/sim/SDM/controls/valve-norm</property>
+      <step type="double">-0.2</step>
+      <min type="double">0</min>
+      <max type="double">1</max>
+    </binding>
+  </key>
+
+  <key n="109">
+    <name>m</name>
+    <desc>blow Ballast Tanks</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/sim/SDM/controls/blow-norm</property>
+      <step type="double">0.2</step>
+      <min type="double">0</min>
+      <max type="double">1</max>
+    </binding>
+  </key>
+ 
+  <key n="77">
+    <name>M</name>
+    <desc>close Ballast Tanks</desc>
+    <repeatable type="bool">true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/sim/SDM/controls/blow-norm</property>
+      <step type="double">-0.2</step>
+      <min type="double">0</min>
+      <max type="double">1</max>
+    </binding>
+  </key>
+
+</PropertyList>

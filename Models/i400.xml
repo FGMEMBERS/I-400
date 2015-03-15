@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>i400.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/I-400/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+
+      var bay_door = self.getNode("sim/model/door-positions/bay/position-norm", 1);
+
+      bay_door.alias(float_0);
+    </load>
+
+    <unload>
+      livery_update.stop();
+      bay_door.unalias();
+    </unload>
+  </nasal>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>coque</object-name>
+    <object-name>catapulte</object-name>
+    <object-name>ailerons</object-name>
+    <object-name>batiment</object-name>
+    <object-name>tour</object-name>
+    <object-name>inttour</object-name>
+    <object-name>derives</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>direction</object-name>
+    <object-name>trous</object-name>
+    <object-name>porte</object-name>
+    <object-name>intporte</object-name>
+    <object-name>pont</object-name>
+    <object-name>pont2</object-name>
+    <object-name>pont3</object-name>
+    <object-name>elements</object-name>
+    <object-name>canon</object-name>
+    <object-name>canon2</object-name>
+    <object-name>grue</object-name>
+    <object-name>rambarde</object-name>
+    <object-name>tubulures</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>coque</object-name>
+    <object-name>catapulte</object-name>
+    <object-name>ailerons</object-name>
+    <object-name>batiment</object-name>
+    <object-name>tour</object-name>
+    <object-name>inttour</object-name>
+    <object-name>derives</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>direction</object-name>
+    <object-name>trous</object-name>
+    <object-name>porte</object-name>
+    <object-name>intporte</object-name>
+    <object-name>pont</object-name>
+    <object-name>pont2</object-name>
+    <object-name>pont3</object-name>
+    <object-name>elements</object-name>
+    <object-name>canon</object-name>
+    <object-name>canon2</object-name>
+    <object-name>grue</object-name>
+    <object-name>rambarde</object-name>
+    <object-name>tubulures</object-name>
+    
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <!-- Aichi M6A -->
+  <model>
+    <name>M6A</name>
+    <path>Aircraft/I-400/Models/Aichi-M6A/m6a.xml</path>
+    <offsets>
+      <x-m> -21.9 </x-m>
+      <y-m>   0.0 </y-m>
+      <z-m>   4.2 </z-m>
+      <pitch-deg> 10 </pitch-deg>
+    </offsets>
+  </model> 
+  
+  <animation>
+    <type>select</type>
+    <object-name>M6A</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/door-positions/bay/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>heliceG</object-name>
+    <property>controls/flight/throttle-filtered</property>
+    <factor> 120 </factor>
+    <center>
+      <x-m> 53.31757 </x-m>
+      <y-m> -2.29025 </y-m>
+      <z-m> -4.74433 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>heliceD</object-name>
+    <property>controls/flight/throttle-filtered</property>
+    <factor> 120 </factor>
+    <center>
+      <x-m> 53.31757 </x-m>
+      <y-m>  2.29025 </y-m>
+      <z-m> -4.74433 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>direction</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m> 56.70256 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -4.91120 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- Porte droite -->
+  <animation>
+    <name>LaPorte</name>
+    <object-name>porte</object-name>
+    <object-name>intporte</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>LaPorte</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.bay.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LaPorte</object-name>
+    <property>sim/model/door-positions/bay/position-norm</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m> -10.29324 </x-m>
+      <y-m>   2.13258 </y-m>
+      <z-m>   3.76191 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

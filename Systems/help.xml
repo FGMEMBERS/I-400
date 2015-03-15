@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Submarine Type I-400</title>
+  <key>
+    <name>d</name>
+    <desc>Open/Close door</desc>
+  </key>
+  <key>
+    <name>n</name>
+    <desc>Open flood valve</desc>
+  </key>
+  <key>
+    <name>N</name>
+    <desc>Close flood valve</desc>
+  </key>
+  <key>
+    <name>m</name>
+    <desc>Blow ballast tanks</desc>
+  </key>
+  <key>
+    <name>M</name>
+    <desc>Close ballast tanks</desc>
+  </key>
+  
+</PropertyList>
